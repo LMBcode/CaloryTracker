@@ -1,0 +1,4 @@
+package plcoding
+
+class a {
+}

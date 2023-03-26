@@ -1,4 +1,4 @@
-package com.plcoding.core
+package com.plcoding.core.data.preferences
 
 import android.content.SharedPreferences
 import com.plcoding.core.domain.model.ActivityLevel
@@ -87,5 +87,15 @@ class DefaultPreferences(
             proteinRatio = proteinRatio,
             fatRatio = fatRatio
         )
+    }
+
+    override fun saveShouldShowOnBoarding(shouldShow: Boolean) {
+        sharedPref.edit()
+            .putBoolean(Preferences.KET_SHOULD_SHOW,shouldShow)
+            .apply()
+    }
+
+    override fun loadShouldShowOnBoarding(): Boolean {
+        return sharedPref.getBoolean(Preferences.KET_SHOULD_SHOW,true)
     }
 }
