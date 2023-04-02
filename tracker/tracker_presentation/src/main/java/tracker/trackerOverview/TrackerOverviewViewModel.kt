@@ -95,7 +95,7 @@ class TrackerOverviewViewModel  @Inject constructor(
                     proteinGoal = nutrientsResult.proteinGoal,
                     fatGoal = nutrientsResult.fatGoal,
                     caloriesGoal = nutrientsResult.caloriesGoal,
-                    trackedFood = foods,
+                    trackedFoods = foods,
                     meals = state.meals.map {
                         val nutrientsForMeal =
                             nutrientsResult.mealNutrients[it.mealType]
