@@ -31,6 +31,7 @@ class TrackerOverviewViewModel  @Inject constructor(
     var getFoodsForDateJobs : Job? = null
 
     init {
+        refreshFoods()
         preferences.saveShouldShowOnBoarding(false)
     }
 
